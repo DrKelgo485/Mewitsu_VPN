@@ -1,0 +1,14 @@
+{
+  "app_name_chrome": {
+    "message": "Darmowy VPN dla Chrome - Mewitsu | VPN"
+  },
+  "app_name_edge": {
+    "message": "Bezpłatna sieć VPN dla Edge — Mewitsu | VPN"
+  },
+  "app_name_firefox": {
+    "message": "Bezpłatna sieć VPN dla Firefox — Mewitsu | VPN"
+  },
+  "app_description": {
+    "message": "Szybka, ekstremalna ochrona i łatwa w użyciu usługa Mewitsu VPN do ochrony Twojej tożsamości online. Ciesz się od zespołu Mewitsu"
+  }
+}

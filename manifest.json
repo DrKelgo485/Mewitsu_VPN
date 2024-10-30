@@ -1,0 +1,89 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "__MSG_app_name_chrome__",
+  "description": "__MSG_app_description__",
+  "version": "3.1.5",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+  "homepage_url": "https://veepn.com/",
+  "minimum_chrome_version": "109",
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "__MSG_app_name_chrome__",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/16-grey.png",
+      "32": "icons/32-grey.png",
+      "48": "icons/48-grey.png",
+      "64": "icons/64-grey.png",
+      "128": "icons/128-grey.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "proxy",
+    "tabs",
+    "cookies",
+    "notifications",
+    "webRequest",
+    "webRequestAuthProvider",
+    "privacy"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/main.tsx-loader-Cis86Jaj.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "assets/main-Dp4iM3WR.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "resources": [
+        "fonts/FigtreeVF.woff2"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "resources": [
+        "assets/x-close-cross-BQABqpBb.svg",
+        "assets/logo-veepn-DYzqQ5GZ.svg",
+        "assets/alert-BEaDoEhr.svg",
+        "assets/client-D76wMQzm.js",
+        "assets/index-DRyaSCpo.js",
+        "assets/main.tsx-Di2mpyAK.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}
